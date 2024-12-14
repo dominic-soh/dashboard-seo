@@ -38,12 +38,7 @@ jobs:
       - name: Install dependencies and build
         run: |
           bun install
-          bun run build
-
-      - name: Save build artifacts
-        run: |
-          mkdir -p out
-          cp -r dist/* out
+          bun build ./index.tsx --outdir ./out
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
