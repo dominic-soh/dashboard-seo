@@ -55,6 +55,7 @@ jobs:
           path: ./out
 
   deploy:
+    if: github.event_name != 'pull_request' # Add condition to skip on pull requests
     needs: build
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
