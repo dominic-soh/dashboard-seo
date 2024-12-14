@@ -17,7 +17,6 @@ jobs:
       - name: Install Bun
         run: |
           curl -fsSL https://bun.sh/install | bash
-          echo '::add-path::$HOME/.bun/bin'
 
       - name: Install dependencies and build
         run: |
