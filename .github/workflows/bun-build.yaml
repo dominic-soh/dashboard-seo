@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies and build
         run: |
           bun install
-          bun build # Replace with your actual Bun build command/script
+          bun run build
 
       - name: Upload build artifacts
         if: success()
