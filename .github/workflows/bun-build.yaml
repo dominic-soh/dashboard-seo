@@ -43,6 +43,7 @@ jobs:
       - name: Save build artifacts
         run: |
           mkdir -p out
+          cp -r dist/* out
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
