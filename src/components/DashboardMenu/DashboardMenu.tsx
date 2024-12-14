@@ -7,7 +7,7 @@ export function DashboardMenu() {
       <div className="relative aspect-video">
         <Image
           alt="some nigga"
-          src="/images/logo.png"
+          src="https://cataas.com/cat"
           fill
           className="object-cover"
         />
