@@ -1,4 +1,5 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { DashboardChart } from "../DashboardChart/DashboardChart";
 
 export function DashboardMain() {
   const categories = [
@@ -15,6 +16,7 @@ export function DashboardMain() {
       content: "Trending Nigga",
     },
   ];
+
   return (
     <div className="flex flex-col gap-2 bg-stone-500 rounded-lg h-full p-8">
       <TabGroup>
@@ -34,7 +36,7 @@ export function DashboardMain() {
               key={name}
               className="rounded-xl bg-white/5 p-3 grow h-full"
             >
-              <div className="flex">{content}</div>
+              {name === "Recent" ? <DashboardChart /> : content}
             </TabPanel>
           ))}
         </TabPanels>
