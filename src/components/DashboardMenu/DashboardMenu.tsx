@@ -3,12 +3,13 @@ import Image from "next/image";
 import nextConfig from "../../../next.config";
 
 export function DashboardMenu() {
+  const basePath = nextConfig.basePath || "";
   return (
     <div className="flex flex-col gap-2 bg-stone-700 rounded-lg h-full p-4">
       <div className="relative aspect-video">
         <Image
           alt="some nigga"
-          src={`${nextConfig.basePath}/logo.png`}
+          src={`${basePath}/logo.png`}
           fill
           className="object-cover"
         />
